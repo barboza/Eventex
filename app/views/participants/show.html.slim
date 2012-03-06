@@ -13,8 +13,8 @@ p
   strong Card:
   = @participant.card
 p
-  strong User.references:
-  = @participant.user.references
+  strong Created by:
+  = @participant.user.name
 
 = link_to 'Edit', edit_participant_path(@participant)
 '|

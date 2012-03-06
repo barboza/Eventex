@@ -1,2 +1,3 @@
-class ModalitiesController < InheritedResources::Base
+class ModalitiesController < ApplicationController
+	inherit_resources
 end
