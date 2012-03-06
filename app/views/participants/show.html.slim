@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @participant.name
+p
+  strong Ctg:
+  = @participant.ctg
+p
+  strong Region:
+  = @participant.region
+p
+  strong Card:
+  = @participant.card
+p
+  strong User.references:
+  = @participant.user.references
+
+= link_to 'Edit', edit_participant_path(@participant)
+'|
+= link_to 'Back', participants_path

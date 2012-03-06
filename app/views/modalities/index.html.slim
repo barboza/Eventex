@@ -1,0 +1,25 @@
+h1 Listing modalities
+
+table
+  tr
+    th Name
+    th Description
+    th Participants
+    th Event
+    th
+    th
+    th
+
+  - @modalities.each do |modality|
+    tr
+      td = modality.name
+      td = modality.description
+      td = modality.participants
+      td = modality.event
+      td = link_to 'Show', modality
+      td = link_to 'Edit', edit_modality_path(modality)
+      td = link_to 'Destroy', modality, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Modality', new_modality_path

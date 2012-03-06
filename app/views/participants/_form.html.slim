@@ -1,0 +1,12 @@
+= simple_form_for(@participant) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :ctg
+    = f.input :region
+    = f.input :card
+    = f.input :user.references
+
+  .form-actions
+    = f.button :submit

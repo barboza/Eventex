@@ -1,0 +1,13 @@
+doctype
+html
+	head
+		title Eventex
+		= stylesheet_link_tag    "application", :media => "all"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	body
+		- if user_signed_in?
+			p Bem vindo(a) #{current_user.name} | #{link_to "Editar Perfil", edit_user_registration_path} | #{link_to "Logout", destroy_user_session_path}
+		- else
+			= link_to "Entrar", new_user_session_path
+		= yield
