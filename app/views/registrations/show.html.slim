@@ -1,8 +1,12 @@
 p#notice = notice
 
-p
-  strong User:
-  = @registration.user
+p 
+	| Modality:	
+	b #{@registration.modality.name}
+ul
+	- for participant in @registration.participants
+		li = participant.name
+
 
 = link_to 'Edit', edit_registration_path(@registration)
 '|

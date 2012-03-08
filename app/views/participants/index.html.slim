@@ -6,7 +6,6 @@ table
     th Ctg
     th Region
     th Card
-    th User.references
     th
     th
     th
@@ -17,7 +16,7 @@ table
       td = participant.ctg
       td = participant.region
       td = participant.card
-      td = participant.user.references
+      
       td = link_to 'Show', participant
       td = link_to 'Edit', edit_participant_path(participant)
       td = link_to 'Destroy', participant, :confirm => 'Are you sure?', :method => :delete

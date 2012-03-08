@@ -43,10 +43,16 @@ ActiveRecord::Schema.define(:version => 20120306183245) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "participants_registrations", :id => false, :force => true do |t|
+    t.integer "registration_id"
+    t.integer "participant_id"
+  end
+
   create_table "registrations", :force => true do |t|
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "modality_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   add_index "registrations", ["user_id"], :name => "index_registrations_on_user_id"

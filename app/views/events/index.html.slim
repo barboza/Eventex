@@ -1,13 +1,10 @@
 h1 Listing events
 
-table
+table class="table table-bordered table-striped table-condensed" 
   tr
     th Name
     th Date
     th Description
-    th User
-    th
-    th
     th
 
   - @events.each do |event|
@@ -15,11 +12,15 @@ table
       td = event.name
       td = event.date
       td = event.description
-      td = event.user
-      td = link_to 'Show', event
-      td = link_to 'Edit', edit_event_path(event)
-      td = link_to 'Destroy', event, :confirm => 'Are you sure?', :method => :delete
-
+      td 
+        = link_to event do
+          i class="icon-search"
+        |  
+        = link_to edit_event_path(event) do
+          i class="icon-edit"
+        |  
+        = link_to event, :confirm => 'Are you sure?', :method => :delete do
+          i class="icon-remove"
 br
 
-= link_to 'New Event', new_event_path
+= link_to 'New Event', new_event_path, :class => 'btn '

@@ -2,14 +2,17 @@ h1 Listing registrations
 
 table
   tr
-    th User
+    th ID
+    th Participants
     th
     th
     th
 
   - @registrations.each do |registration|
     tr
-      td = registration.user
+      td = registration.id
+      td
+        = (registration.participants.map { |participant| participant.name }).join(', ')
       td = link_to 'Show', registration
       td = link_to 'Edit', edit_registration_path(registration)
       td = link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete

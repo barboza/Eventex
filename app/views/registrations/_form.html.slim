@@ -1,8 +1,9 @@
 = simple_form_for(@registration) do |f|
-  = f.error_notification
+	= f.error_notification
 
-  .form-inputs
-    = f.association :user
-
-  .form-actions
-    = f.button :submit
+	.form-inputs
+	= f.association :modality, :collection => Modality.find(:all)
+	= f.simple_fields_for :participants do |p|
+		= render 'participant_fields', :f => p
+	.form-actions
+		= f.button :submit

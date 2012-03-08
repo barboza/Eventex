@@ -1,5 +1,4 @@
 class Participant < ActiveRecord::Base
-	belongs_to :user
-	has_many :appointments
-	has_many :registrations, :through => :appointments
+	has_and_belongs_to_many :registrations
+	validates_presence_of :name
 end
