@@ -1,11 +1,10 @@
 h1 Listing modalities
 
-table
+table class="table table-bordered table-striped table-condensed"
   tr
     th Name
     th Description
     th Participants
-    th Event
     th
     th
     th
@@ -15,7 +14,6 @@ table
       td = modality.name
       td = modality.description
       td = modality.participants
-      td = modality.event.name
       td = link_to 'Show', modality
       td = link_to 'Edit', edit_modality_path(modality)
       td = link_to 'Destroy', modality, :confirm => 'Are you sure?', :method => :delete

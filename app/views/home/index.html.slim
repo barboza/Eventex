@@ -1,2 +1,12 @@
-h1 Home#index
-p Find me in app/views/home/index.html.slim
+p#notice = notice
+h1 Bem vindo!
+br
+br
+- if session[:event]
+  h2 
+    | Evento Selecionado:
+    = session[:event].name
+  = link_to "Change Event", "events/list/all"
+- else
+  - if user_signed_in?
+    = render :template => "events/list"

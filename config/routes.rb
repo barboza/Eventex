@@ -9,6 +9,9 @@ Eventex::Application.routes.draw do
   resources :participants
 
   devise_for :users
+
+  match 'events/select/:id' => 'events#select'
+  match 'events/list/all' => 'events#list'
   #   resources :users
 
   # The priority is based upon order of creation:

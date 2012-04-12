@@ -12,4 +12,21 @@ class EventsController < InheritedResources::Base
 			end
 		end
 	end
+
+	def select
+		respond_to do |format|
+			if params[:id]
+				session[:event] = Event.find(params[:id])
+				format.html {redirect_to(root_url, :notice => 'Event was successfully selected.') }
+				format.json { render :json => @event, :status => :selected, :llocation => @event }
+			else
+				format.html { redirect_to(home_url, :notice => 'Event wasn\'t successfully selected.') }
+				format.json { render :json => @event.errors, :status => :uprocessable_entity }
+			end
+		end
+	end
+
+	def list
+		@events = Event.all
+	end
 end
