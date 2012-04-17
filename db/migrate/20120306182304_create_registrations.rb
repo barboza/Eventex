@@ -4,6 +4,5 @@ class CreateRegistrations < ActiveRecord::Migration
       t.references :modality
       t.timestamps
     end
-    add_index :registrations, :user_id
   end
 end

@@ -4,7 +4,7 @@ class EventsController < InheritedResources::Base
 
 		respond_to do |format|
 			if @event.save
-				format.html {redirect_to(events_url, :notice => 'Event was successfully created.') }
+				format.html {redirect_to("/events/list/all", :notice => 'Event was successfully created.') }
 				format.json { render :json => @event, :status => :created, :llocation => @event }
 			else
 				format.html { render :action => 'new' }

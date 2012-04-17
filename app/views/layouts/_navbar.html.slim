@@ -12,4 +12,8 @@
           =link_to "Participantes", participants_path
         li class="#{'active' if /^\/registrations.*$/.match(request.fullpath)}"
           =link_to "Inscrições", registrations_path
+        li.dropdown#menu1
+          a.dropdown-toggle href="#menu1" data-toggle="dropdown" 
+            | Nova Inscrição
+          = render "layouts/dropdown"
         / li=link_to "Usuários", '/users'

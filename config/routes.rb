@@ -11,6 +11,7 @@ Eventex::Application.routes.draw do
   devise_for :users
 
   match 'events/select/:id' => 'events#select'
+  match 'registrations/new/:id' => 'registrations#new'
   match 'events/list/all' => 'events#list'
   #   resources :users
 

@@ -21,6 +21,7 @@ group :assets do
 	gem 'simple_form', '~> 2.0.0'
 	gem 'country_select'
 	gem 'less'
+  gem 'sass'
 
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
