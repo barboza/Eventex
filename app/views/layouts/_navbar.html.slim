@@ -1,0 +1,15 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      a.brand href='#'
+        ' Eventex
+      ul.nav
+        li class="#{'active' if /^\/events.*$/.match(request.fullpath)}"
+          =link_to "Eventos", events_path
+        li class="#{'active' if /^\/modalities.*$/.match(request.fullpath)}"
+          =link_to "Modalidades", modalities_path
+        li class="#{'active' if /^\/participants.*$/.match(request.fullpath)}"
+          =link_to "Participantes", participants_path
+        li class="#{'active' if /^\/registrations.*$/.match(request.fullpath)}"
+          =link_to "Inscrições", registrations_path
+        / li=link_to "Usuários", '/users'

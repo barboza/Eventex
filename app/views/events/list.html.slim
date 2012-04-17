@@ -1,0 +1,20 @@
+h1 Select an Event to manage
+
+table class="table table-bordered table-striped table-condensed" 
+  tr
+    th Name
+    th Date
+    th Description
+    th
+
+  - @events.each do |event|
+    tr
+      td = event.name
+      td = event.date
+      td = event.description
+      td 
+        = link_to 'Select', "/events/select/#{event.id}"
+         
+br
+
+= link_to 'New Event', new_event_path, :class => 'btn '

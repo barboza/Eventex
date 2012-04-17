@@ -1,0 +1,10 @@
+.span3
+  .well.sidebar-nav
+    h3= user_signed_in? ? "Bem vindo #{current_user.name}" : ''
+    ul.nav.nav-list
+      - if user_signed_in?
+        li.nav-header
+        li= link_to "Editar Perfil", edit_user_registration_path
+        li= link_to "Logout", destroy_user_session_path
+      - else
+       	li= link_to "Entrar", new_user_session_path
