@@ -1,0 +1,49 @@
+h1 = @modality
+table.table.table-bordered.table-condensed
+  tr
+    th 
+      h2 Inscrição
+    th 
+      h3 1
+    th 
+      h3 2
+    th 
+      h3 3
+    th 
+      h3 4
+    th 
+      h3 5
+    th 
+      h3 6
+    th 
+      h3 7
+    th 
+      h3 8
+    th 
+      h3 9
+    th 
+      h3 10
+
+  - @registrations.each do |registration|
+    - registration.participants.each do |participant|
+      tr
+        td
+          h3
+            = registration.id
+            | . 
+            = participant.name
+          b CTG: 
+          = "#{participant.ctg}, #{participant.region}a Região"
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+        td
+    tr style="background-color:#666"
+      td colspan="11"
+= link_to 'Back', root_path, :class => 'btn'

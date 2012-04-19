@@ -1,18 +1,21 @@
 p#notice = notice
 
 p
-  strong Name:
+  strong Nome:
   = @modality.name
 p
-  strong Description:
+  strong Descrição:
   = @modality.description
 p
-  strong Participants:
+  strong Participantes:
   = @modality.participants
 p
-  strong Event:
-  = @modality.event
+  strong Evento:
+  = @modality.event.name
+p
+  strong Valor (R$):
+  = @modality.value
 
-= link_to 'Edit', edit_modality_path(@modality)
-'|
-= link_to 'Back', modalities_path
+= link_to 'Editar', edit_modality_path(@modality), :class => 'btn'
+|   
+= link_to 'Voltar', modalities_path, :class => 'btn'

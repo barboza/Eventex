@@ -1,0 +1,22 @@
+p
+  .center style="text-align:center;"
+    |   Modalidade: 
+    strong #{@registration.modality.name}
+  | Numero de Inscrição: 
+  strong #{@registration.id}
+p 
+  |   Recebemos de 
+  strong = @participants
+  |  a quantia de R$ 
+  strong = sprintf('%.2f', @registration.modality.value)
+  |  Correspondente à inscrição na modalidade 
+  strong = @registration.modality.name
+  br
+  br
+  | Taquara, 
+  = Time.now.strftime('%d de Abril de 2012')
+  br
+  p style="text-align:center;"
+    | ____________________________
+    br
+    |   CTG "O Fogão Gaúcho"

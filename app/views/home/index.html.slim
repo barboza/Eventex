@@ -4,7 +4,7 @@ br
 br
 - if session[:event]
   h2 
-    | Evento Selecionado:
+    | Evento Selecionado: 
     = session[:event].name
   = link_to "Change Event", "events/list/all"
 - else

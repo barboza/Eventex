@@ -4,7 +4,7 @@ class CreateParticipants < ActiveRecord::Migration
       t.string :name
       t.string :ctg
       t.integer :region
-      t.integer :card
+      t.bigint :card
       t.references :user
 
       t.timestamps

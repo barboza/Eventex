@@ -2,10 +2,10 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
-    = f.input :ctg
-    = f.input :region
-    = f.input :card
+    = f.input :name, :label => 'Nome: '
+    = f.input :ctg, :label => 'CTG: '
+    = f.input :region, :label => 'Região: '
+    = f.input :card, :label => 'Cartão Tradicionalista: '
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, :value => 'Salvar'

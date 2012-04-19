@@ -2,10 +2,11 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
-    = f.input :description
-    = f.input :participants
-    = f.association :event
+    = f.input :name, :label => "Nome: "
+    = f.input :description, :label => "Descrição: "
+    = f.input :participants, :label => "Participantes: "
+    = f.input :value, :label => "Valor (R$): "
+    = f.association :event, :label => "Evento: "
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, :value => "Salvar"

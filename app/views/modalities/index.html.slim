@@ -1,10 +1,11 @@
-h1 Listing modalities
+h1 Modalidades
 
 table class="table table-bordered table-striped table-condensed"
   tr
-    th Name
-    th Description
-    th Participants
+    th Nome
+    th Descrição
+    th Participantes
+    th Valor (R$)
     th
     th
     th
@@ -14,10 +15,11 @@ table class="table table-bordered table-striped table-condensed"
       td = modality.name
       td = modality.description
       td = modality.participants
-      td = link_to 'Show', modality
-      td = link_to 'Edit', edit_modality_path(modality)
-      td = link_to 'Destroy', modality, :confirm => 'Are you sure?', :method => :delete
+      th = sprintf("%.2f", modality.value)
+      td = link_to 'Detalhes', modality
+      td = link_to 'Editar', edit_modality_path(modality)
+      td = link_to 'Excluir', modality, :confirm => 'Are you sure?', :method => :delete
 
 br
 
-= link_to 'New Modality', new_modality_path, :class => 'btn'
+= link_to 'Nova Modalidade', new_modality_path, :class => 'btn'

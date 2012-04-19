@@ -1,10 +1,10 @@
-h1 Select an Event to manage
+h1 Selecione um evento para gerenciar:
 
 table class="table table-bordered table-striped table-condensed" 
   tr
-    th Name
-    th Date
-    th Description
+    th Nome
+    th Data
+    th Descrição
     th
 
   - @events.each do |event|
@@ -13,8 +13,8 @@ table class="table table-bordered table-striped table-condensed"
       td = event.date
       td = event.description
       td 
-        = link_to 'Select', "/events/select/#{event.id}"
+        = link_to 'Selecionar', "/events/select/#{event.id}"
          
 br
 
-= link_to 'New Event', new_event_path, :class => 'btn '
+= link_to 'Novo Evento', new_event_path, :class => 'btn '

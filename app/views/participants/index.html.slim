@@ -1,11 +1,11 @@
-h1 Listing participants
+h1 Participantes
 
 table class="table table-bordered table-striped table-condensed"
   tr
-    th Name
-    th Ctg
-    th Region
-    th Card
+    th Nome
+    th CTG
+    th Região
+    th Cartão Tradicionalista
     th
     th
     th
@@ -17,10 +17,10 @@ table class="table table-bordered table-striped table-condensed"
       td = participant.region
       td = participant.card
       
-      td = link_to 'Show', participant
-      td = link_to 'Edit', edit_participant_path(participant)
-      td = link_to 'Destroy', participant, :confirm => 'Are you sure?', :method => :delete
+      td = link_to 'Detalhes', participant
+      td = link_to 'Editar', edit_participant_path(participant)
+      td = link_to 'Excluir', participant, :confirm => 'Você tem certeza?', :method => :delete
 
 br
 
-= link_to 'New Participant', new_participant_path, :class => 'btn'
+= link_to 'Novo Participante', new_participant_path, :class => 'btn'

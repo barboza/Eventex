@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120306183245) do
+ActiveRecord::Schema.define(:version => 20120419122537) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -26,8 +26,9 @@ ActiveRecord::Schema.define(:version => 20120306183245) do
     t.text     "description"
     t.integer  "participants"
     t.integer  "event_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.float    "value",        :default => 0.0
   end
 
   add_index "modalities", ["event_id"], :name => "index_modalities_on_event_id"

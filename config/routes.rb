@@ -13,6 +13,8 @@ Eventex::Application.routes.draw do
   match 'events/select/:id' => 'events#select'
   match 'registrations/new/:id' => 'registrations#new'
   match 'events/list/all' => 'events#list'
+  match '/registrations/report/:id' => 'registrations#report'
+  match '/registrations/list/:id' => 'registrations#report_all'
   #   resources :users
 
   # The priority is based upon order of creation:

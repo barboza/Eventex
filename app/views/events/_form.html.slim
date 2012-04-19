@@ -2,9 +2,9 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
-    = f.input :date
-    = f.input :description
+    = f.input :name, :label => "Nome: "
+    = f.input :date, :label => "Data: "
+    = f.input :description, :label => "Descrição: "
 
   .form-actions
-    = f.button :submit
+    = f.button :submit, :value => "Salvar"

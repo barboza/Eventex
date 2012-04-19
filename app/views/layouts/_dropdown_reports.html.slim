@@ -1,0 +1,5 @@
+ul.dropdown-menu
+  - if @modalities
+    - @modalities.each do |modality|
+      li
+        = link_to modality.name, "/registrations/list/#{modality.id}"

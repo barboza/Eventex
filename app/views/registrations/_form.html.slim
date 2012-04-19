@@ -2,8 +2,8 @@
 	= f.error_notification
 
 	.form-inputs
-	= f.association :modality, :collection => Modality.find(:all)
+	= f.association :modality, :collection => Modality.find(:all), :label => 'Modalidade'
 	= f.simple_fields_for :participants do |p|
 		= render 'participant_fields', :f => p
 	.form-actions
-		= f.button :submit
+		= f.button :submit, :value => 'Salvar'

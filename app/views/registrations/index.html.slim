@@ -1,9 +1,11 @@
-h1 Listing registrations
+h1 Inscrições
 
-table
+table class="table table-bordered table-striped table-condensed"
   tr
-    th ID
-    th Participants
+    th N. Inscrição
+    th Participantes
+    th Modalidade
+    th
     th
     th
     th
@@ -13,10 +15,12 @@ table
       td = registration.id
       td
         = (registration.participants.map { |participant| participant.name }).join(', ')
-      td = link_to 'Show', registration
-      td = link_to 'Edit', edit_registration_path(registration)
-      td = link_to 'Destroy', registration, :confirm => 'Are you sure?', :method => :delete
+      td = registration.modality.name
+      td = link_to 'Recibo', "/registrations/report/#{registration.id}"
+      td = link_to 'Detalhes', registration
+      td = link_to 'Editar', edit_registration_path(registration)
+      td = link_to 'Excluir', registration, :confirm => 'Você tem certeza?', :method => :delete
 
 br
 
-= link_to 'New Registration', new_registration_path
+= link_to 'Nova Inscrição', new_registration_path, :class => "btn"

@@ -15,5 +15,11 @@
         li.dropdown#menu1
           a.dropdown-toggle href="#menu1" data-toggle="dropdown" 
             | Nova Inscrição
+            b.caret
           = render "layouts/dropdown"
+        li.dropdown#menu2
+          a.dropdown-toggle href="#menu2" data-toggle="dropdown" 
+            | Relatórios
+            b.caret
+          = render "layouts/dropdown_reports"
         / li=link_to "Usuários", '/users'

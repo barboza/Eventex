@@ -1,21 +1,21 @@
 p#notice = notice
 
 p
-  strong Name:
+  strong Nome:
   = @participant.name
 p
-  strong Ctg:
+  strong CTG:
   = @participant.ctg
 p
-  strong Region:
+  strong Região:
   = @participant.region
 p
-  strong Card:
+  strong Cartão tradicionalista:
   = @participant.card
 p
-  strong Created by:
+  strong Cadastrado por:
   = @participant.user.name
 
-= link_to 'Edit', edit_participant_path(@participant)
+= link_to 'Editar', edit_participant_path(@participant), :class => 'btn'
 '|
-= link_to 'Back', participants_path
+= link_to 'Voltar', participants_path, :class => 'btn'
