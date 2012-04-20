@@ -1,10 +1,13 @@
 p
+  br
+  br
   .center style="text-align:center;"
     |   Modalidade: 
     strong #{@registration.modality.name}
   | Numero de Inscrição: 
   strong #{@registration.id}
 p 
+  br
   |   Recebemos de 
   strong = @participants
   |  a quantia de R$ 
@@ -15,6 +18,8 @@ p
   br
   | Taquara, 
   = Time.now.strftime('%d de Abril de 2012')
+  br
+  br
   br
   p style="text-align:center;"
     | ____________________________

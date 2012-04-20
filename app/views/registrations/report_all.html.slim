@@ -1,5 +1,8 @@
-h1 = @modality
-table.table.table-bordered.table-condensed
+- 8.times do
+  br
+.center style="text-align:center;"
+  h1 = @modality
+table.table.table-bordered.table-condensed border="1"
   tr
     th 
       h2 Inscrição
@@ -23,16 +26,19 @@ table.table.table-bordered.table-condensed
       h3 9
     th 
       h3 10
-
+  - x = 0
   - @registrations.each do |registration|
+  - x = x + 1
     - registration.participants.each do |participant|
       tr
         td
           h3
-            = registration.id
+            = x  
             | . 
             = participant.name
-          b CTG: 
+          b Inscrição: 
+          = registration.id
+          b   CTG: 
           = "#{participant.ctg}, #{participant.region}a Região"
         td
         td
